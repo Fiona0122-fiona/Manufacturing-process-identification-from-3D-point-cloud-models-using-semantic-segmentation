@@ -1,39 +1,15 @@
 # Manufacturing process identification from 3D point cloud models using semantic segmentation
 
-International Journal of Computer Vision, 2022
-
-[Zhiyuan Zhang](https://zhiyuanzhang.net/), [Binh-Son Hua](https://sonhua.github.io/), [Sai-Kit Yeung](https://www.saikit.org/).
-
-[Project Page](https://zhiyuanzhang.net/projects/riconv) | [arXiv](https://arxiv.org/pdf/2202.13094.pdf)
+Journal of manufacturing systems, 2025
 
 If you found this paper useful in your research, please cite:
 ```
-
-@article{zhang2022riconv2,
-  title={RIConv++: Effective Rotation Invariant Convolutions for 3D Point Clouds Deep Learning},
-  author={Zhang, Zhiyuan and Hua, Binh-Son and Yeung, Sai-Kit},
-  journal={International Journal of Computer Vision},
-  volume={130},
-  number={5},
-  pages={1228--1243},
-  year={2022},
-  publisher={Springer}
-}
-
-@inproceedings{zhang2020global,
-  title={Global Context Aware Convolutions for 3D Point Cloud Understanding},
-  author={Zhang, Zhiyuan and Hua, Binh-Son and Chen, Wei and Tian, Yibin and Yeung, Sai-Kit},
-  booktitle={2020 International Conference on 3D Vision (3DV)},
-  pages={210--219},
-  year={2020}
-}
-
-@inproceedings{zhang2019rotation,
-  title={Rotation Invariant Convolutions for 3D Point Clouds Deep Learning},
-  author={Zhang, Zhiyuan and Hua, Binh-Son and Rosen, David W and Yeung, Sai-Kit},
-  booktitle={2019 International Conference on 3D Vision (3DV)},
-  pages={204--213},
-  year={2019}
+@article{Liu2025ManufacturingPI,
+  title={Manufacturing process identification from 3D point cloud models using semantic segmentation},
+  author={Xiaofang Liu and Zhichao Wang and Shreyes N. Melkote and David W. Rosen},
+  journal={Journal of Manufacturing Systems},
+  year={2025},
+  url={https://api.semanticscholar.org/CorpusID:280879364}
 }
 ```
 
