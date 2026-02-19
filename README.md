@@ -31,7 +31,7 @@ We perform semantic segmentation on mriconv2_3d and priconv2_3d respectively. mr
 
 ```
 ####  mriconv2_3d
-The mriconv2_3d dataset has been uploaded, including NumPy (.npy) files and raw CAD models in SLDPRT and STL formats.
+The mriconv2_3d dataset has been uploaded, including npy files and raw CAD models in SLDPRT and STL formats.
 
 ```
 cd data_utils
