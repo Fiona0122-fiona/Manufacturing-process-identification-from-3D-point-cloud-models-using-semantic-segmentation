@@ -43,13 +43,14 @@ cd ../../
 ### Segmentation
 We perform semantic segmentation on mriconv2_3d and priconv2_3d respectively.
 
+If you want to process your own data, please use:
 ```
 cd data_utils
 python collect_indoor3d_data.py
 ```
 
-Processed data will save in `../data/s3dis/mriconv2_3d/`. (**Note**: the `data/` folder is outside the project folder)
-Processed data will save in `../data/s3dis/priconv2_3d/`. (**Note**: the `data/` folder is outside the project folder)
+Processed data save in `../data/s3dis/mriconv2_3d/`. (**Note**: the `data/` folder is outside the project folder)
+Processed data save in `../data/s3dis/priconv2_3d/`. (**Note**: the `data/` folder is outside the project folder)
 The raw data is also provided in the folder "Raw Data".
 
 Training:
