@@ -14,7 +14,7 @@ If you found this paper useful in your research, please cite:
 ```
 
 ## Installation
-This repo provides the MRIConv++ and PRIConv++ source codes, which had been tested with Python 3.9.7, PyTorch 1.9.0, CUDA 11.1 on Ubuntu 20.04. Our codes are implemented based on Zhi Yuan Zhang Pytorch implementation of [ RIConv++(https://github.com/cszyzhang/riconv2)], Xu Yan's [PointNet++(Pytorch)](https://github.com/yanx27/Pointnet_Pointnet2_pytorch) and ShaoShuai Shi's [PointNet++ cuda operations](https://github.com/sshaoshuai/Pointnet2.PyTorch).  
+This repo provides the MRIConv++ and PRIConv++ source codes, which had been tested with Python 3.9.7, PyTorch 1.9.0, CUDA 11.1 on Ubuntu 20.04. Our codes are implemented based on Zhi Yuan Zhang's Pytorch implementation of [ RIConv++(https://github.com/cszyzhang/riconv2)], Xu Yan's [PointNet++(Pytorch)](https://github.com/yanx27/Pointnet_Pointnet2_pytorch) and ShaoShuai Shi's [PointNet++ cuda operations](https://github.com/sshaoshuai/Pointnet2.PyTorch).  
 
 Install the pointnet++ cuda operation library by running the following command:
 ```
@@ -24,67 +24,15 @@ cd ../../
 ```
 
 ## Usage
-### Classification
-We perform classification on ModelNet40 and ScanObjectNN respectively.
-#### ModelNet40
 
-Download alignment **ModelNet** [here](https://shapenet.cs.stanford.edu/media/modelnet40_normal_resampled.zip) and save in `../data/modelnet40_normal_resampled/`. Follow the instructions of [PointNet++(Pytorch)](https://github.com/yanx27/Pointnet_Pointnet2_pytorch) to prepare the data. Specifically, please use `--process_data` to preprocess the data, and move the processed data to `../data/modelnet40_preprocessed/`. Alternatively, you can also download the pre-processd data [here](https://1drv.ms/u/s!AmHXm1tT3NIcnnBiRlVxATXtOhe9?e=oynmh2) and save it in `../data/modelnet40_preprocessed/`. (**Note**: the `data/` folder is outside the project folder)
-
-To train a RIConv++ model to classify shapes in the ModelNet40 dataset:
-```
-python3 train_classification_modelnet40.py
-```
-For testing, you can use your trained model by specifying `--log_dir` or use our **pretrained model** [4.9MB](log/classification_modelnet40/pretrained) directly:
-```
-python3 test_classification_modelnet40.py
-```
-#### ScanObjectNN
-Download the **ScanObjectNN** [here](https://hkust-vgd.github.io/scanobjectnn/) and save the `main_split` and `main_split_nobg` subfolders that inlcude the h5 files into the `../data/scanobjectnn/` (**Note**: the `data/` folder is outside the project folder)
-
-Training on the **OBJ_ONLY** variant:
-```
-python3 train_classification_scanobj.py --data_type 'OBJ_NOBG'
-```
-For testing, you can use your trained model by specifying `--log_dir` or use our **pretrained model** [4.9MB](log/classification_scanobj/pretrained/OBJ_NOBG) directly:
-```
-python3 test_classification_scanobj.py --data_type 'OBJ_NOBG'
-```
-
-Training on the **OBJ_BG** variant:
-```
-python3 train_classification_scanobj.py --data_type 'OBJ_BG'
-```
-For testing, you can use your trained model by specifying `--log_dir` or use our **pretrained model** [4.9MB](log/classification_scanobj/pretrained/OBJ_BG) directly:
-```
-python3 test_classification_scanobj.py --data_type 'OBJ_BG'
-```
-
-Training on the hardest variant **PB_T50_RS**:
-```
-python3 train_classification_scanobj.py --data_type 'hardest'
-```
-For testing, you can use your trained model by specifying `--log_dir` or use our **pretrained model** [4.9MB](log/classification_scanobj/pretrained/hardest) directly:
-```
-python3 test_classification_scanobj.py --data_type 'hardest'
-```
 
 ### Segmentation
-We perform part segmentation and semantic segmentation on ShapeNet and S3DIS respectively.
+We perform semantic segmentation on mriconv2_3d and priconv2_3d respectively. mriconv2_3d and priconv2_3d are new datasets generated. 
 
-#### ShapeNet
-Download alignment **ShapeNet** [here](https://shapenet.cs.stanford.edu/media/shapenetcore_partanno_segmentation_benchmark_v0_normal.zip)  and save in `../data/shapenetcore_partanno_segmentation_benchmark_v0_normal/`. (**Note**: the `data/` folder is outside the project folder)
+```
+####  mriconv2_3d
+The mriconv2_3d dataset has been uploaded, including NumPy (.npy) files and raw CAD models in SLDPRT and STL formats.
 
-Training:
-```
-python3 train_partseg.py
-```
-For testing, you can use your trained model by specifying `--log_dir` or use our **pretrained model** [18.2MB](log/part_seg/pretrained) directly:
-```
-python3 test_partseg.py
-```
-
-#### S3DIS
-Please download the **S3DIS** dataset [here](http://buildingparser.stanford.edu/dataset.html#Download), and run the following scripts to preprocess the data:
 ```
 cd data_utils
 python collect_indoor3d_data.py
