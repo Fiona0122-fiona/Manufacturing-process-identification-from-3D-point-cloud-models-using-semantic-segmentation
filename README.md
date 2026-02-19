@@ -1,17 +1,5 @@
 # Manufacturing process identification from 3D point cloud models using semantic segmentation
 
-Journal of manufacturing systems, 2025
-
-If you found this paper useful in your research, please cite:
-```
-@article{Liu2025ManufacturingPI,
-  title={Manufacturing process identification from 3D point cloud models using semantic segmentation},
-  author={Xiaofang Liu and Zhichao Wang and Shreyes N. Melkote and David W. Rosen},
-  journal={Journal of Manufacturing Systems},
-  year={2025},
-  url={https://api.semanticscholar.org/CorpusID:280879364}
-}
-```
 
 ## Installation
 This repo provides the MRIConv++ and PRIConv++ source codes, which had been tested with Python 3.9.7, PyTorch 1.9.0, CUDA 11.1 on Ubuntu 20.04. Our codes are implemented based on Zhi Yuan Zhang's Pytorch implementation of [ RIConv++(https://github.com/cszyzhang/riconv2)], Xu Yan's [PointNet++(Pytorch)](https://github.com/yanx27/Pointnet_Pointnet2_pytorch) and ShaoShuai Shi's [PointNet++ cuda operations](https://github.com/sshaoshuai/Pointnet2.PyTorch).  
@@ -46,6 +34,18 @@ python3 train_semseg.py
 For testing, you can use your trained model by specifying `--log_dir` or use our **pretrained model** [18.2MB](log/sem_seg/pretrained) directly:
 ```
 python3 test_semseg.py
+```
+Journal of manufacturing systems, 2025
+
+If you found this paper useful in your research, please cite:
+```
+@article{Liu2025ManufacturingPI,
+  title={Manufacturing process identification from 3D point cloud models using semantic segmentation},
+  author={Xiaofang Liu and Zhichao Wang and Shreyes N. Melkote and David W. Rosen},
+  journal={Journal of Manufacturing Systems},
+  year={2025},
+  url={https://api.semanticscholar.org/CorpusID:280879364}
+}
 ```
 
 ## License
