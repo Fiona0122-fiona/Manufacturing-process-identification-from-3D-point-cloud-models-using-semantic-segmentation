@@ -1,6 +1,6 @@
 # Manufacturing process identification from 3D point cloud models using semantic segmentation
 
-## CAD Dataset:
+## Dataset associated with manufacturing processes:
 
 <img width="2495" height="913" alt="image" src="https://github.com/user-attachments/assets/16380356-bdeb-4d6c-96ae-63dbf9f8a117" />
 
